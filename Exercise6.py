@@ -1,5 +1,4 @@
 import re, os, time
-
 from collections import Counter
 
 
@@ -83,26 +82,3 @@ elif file == False:
 		exit()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-##print (word,"=", i)
-#	resul = (word +"="+ str(i))
-#print (resul)	
