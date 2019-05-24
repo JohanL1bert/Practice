@@ -9,6 +9,7 @@ def check():
 	data = f.read()
 	f.close()
 
+
 def create_file():
 	f = open("testing.txt", 'w+')
 	f.write("""At the start of the twentieth century, scientists believed that they understood the most fundamental principles of nature. 
@@ -20,9 +21,6 @@ def create_file():
 		start
 		ending, bad, quantum, theory, Roman
 		Klava bravo""")
-
-
-
 
 
 
@@ -42,15 +40,16 @@ def second_method():
 	new_data = data.split()
 	if input_words in new_data:
 		resul = new_data.count(input_words)
-		print (resul)
+		print (input_words, "=", resul)
 	else:
 		print ("Not found")
 	
 
-
-
-
-
+def method_work():
+	if method in ("first", "First"):
+		first_method()
+	elif method in ("second, Second"):
+		second_method()
 
 
 print("Print words")
@@ -59,11 +58,6 @@ method = input("Method of work with words. Print first of second\n")
 print ("filename = testing.txt")
 
 
-def method_work():
-	if method in ("first", "First"):
-		first_method()
-	elif method in ("second, Second"):
-		second_method()
 
 path_to = input("Path to file with name of file \n")
 file = os.path.isfile(path_to)
@@ -81,4 +75,16 @@ elif file == False:
 		time.sleep(1)
 		exit()
 
-
+'''
+def first_method():
+  if input_words not in data:
+    print ("Not found")
+  else:
+    regex = re.compile(input_words)
+    text = regex.findall(data)
+    coun = Counter(text)
+    new = str(coun)[10:-2]
+    new = new.replace(":", " =")
+    new = new.replace ("'", "")
+    print (new)
+'''
